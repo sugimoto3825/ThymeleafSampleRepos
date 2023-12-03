@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org"
+      xmlms:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Member List</title>
+</head>
+<body>
+	<header>
+		<h1>メンバー検索</h1>
+	</header>
+	
+	<!-- レイアウト化の作成　上手くいかない
+	<div lauout:fragment="content" align="center">
+		ここを置き換える
+	</div>
+	-->
+	
+	<div th.insert="fragment :: content"></div>
+	
+</body>
+</html>

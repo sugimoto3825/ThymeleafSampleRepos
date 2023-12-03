@@ -1,0 +1,19 @@
+<!-- Fragmentとして使用する（共通レイアウトを使用する側）-->
+
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org"
+      xmlms:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{commons/layout}"> <!-- commonsフォルダ配下のlayout.htmlを使用する -->
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Sample</title>
+</head>
+<body>
+	<!-- 共通レイアウトで置き換わる内容 -->
+	<div layout:fragment="content">
+		<!-- Controllerで格納したデータの表示 -->
+		<h1 th:text="${name}">表示する部分</h1>
+		<h1>[[${name}]]</h1>
+	</div>
+</body>
+</html>
