@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>確認画面</title>
+</head>
+<body>
+	<ul>
+		<li>名前     ：[[${name}]]</li>
+		<li>生年月日 ：[[${birth}]]</li>
+		<li>年齢     ：[[${age}]]</li>
+	</ul>
+	
+	<form th:action="@{/create}" method="post">
+		<input type="submit" value="登録">
+	</form>
+</body>
+</html>

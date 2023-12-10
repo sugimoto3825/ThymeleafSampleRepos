@@ -9,11 +9,32 @@
 <title>Thymeleaf Sample</title>
 </head>
 <body>
-	<!-- 共通レイアウトで置き換わる内容 -->
+<!--	 共通レイアウトで置き換わる内容 
 	<div layout:fragment="content">
-		<!-- Controllerで格納したデータの表示 -->
+		 Controllerで格納したデータの表示 
 		<h1 th:text="${name}">表示する部分</h1>
 		<h1>[[${name}]]</h1>
+	</div>-->
+
+	<div layout:fragment="content">
+		<h1>メンバー一覧</h1>
+		<table border = "2">
+			<tr>
+				<th class="col_id">ID</th>
+				<th class="col_name">名前</th>
+				<th class="col_birth">生年月日</th>
+				<th class="age">年齢</th>
+			</tr>
+			<tr th:each="obj: ${member}" }>
+				<td th:text="${obj.id}"></td>
+				<td th:text="${obj.name}"></td>
+				<td th:text="${obj.birth}"></td>
+				<td th:text="${obj.age}"></td>
+			</tr>
+		</table>
+		<hr>
 	</div>
+
+
 </body>
 </html>
